@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import de.atcs.jpa.manager.AirTrafficControlManager;
 
@@ -14,6 +15,7 @@ import de.atcs.jpa.manager.AirTrafficControlManager;
 @EntityScan(basePackages="de.atcs.model")
 @EnableJpaRepositories(basePackages="de.atcs")
 @EnableAspectJAutoProxy
+@EnableScheduling
 public class ApplicationIntiator {
 	public static void main(String args[]) {
 		ConfigurableApplicationContext context = SpringApplication.run(ApplicationIntiator.class, args);

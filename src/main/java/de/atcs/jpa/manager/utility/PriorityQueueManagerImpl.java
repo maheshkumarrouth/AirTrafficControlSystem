@@ -88,7 +88,6 @@ public class PriorityQueueManagerImpl implements PriorityQueueManager{
 	}
 
 	public void bootTheApplication() {
-		if(acQueue == null) {
 			isSystemBooted = true;
 			acQueue = new PriorityBlockingQueue<>(11,new AircraftComparator());
 			priorityMap = priorityTypesManager.getPriorityTypeMap();
@@ -97,7 +96,6 @@ public class PriorityQueueManagerImpl implements PriorityQueueManager{
 			acSizeKeyMap = acSizeManager.getACSizKeyeMap();
 			List<AircraftXCheckIn> aircraftXCheckIns = aircraftXCheckInManager.fetchAllAcDetails();
 			this.buildAcBasedOnProority(aircraftXCheckIns);
-		}
 	}
 	
 	public Integer getPriorityTypeByName(String priority) {
