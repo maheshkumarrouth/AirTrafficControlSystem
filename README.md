@@ -8,7 +8,6 @@ SpringBoot
 Maven
 
 Please use below command to run the project.
-
 mvn spring-boot:run
 
 Database credentials placed in application.properties in resource folder.
