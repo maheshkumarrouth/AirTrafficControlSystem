@@ -7,7 +7,6 @@ Mysql
 SpringBoot
 Maven
 
-
 Please use below command to run the project.
 
 mvn spring-boot:run
